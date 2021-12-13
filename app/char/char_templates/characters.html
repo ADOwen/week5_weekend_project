@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>These are the characters you own</h1>
+{% for c in characters %}
+<div class="container">
+<ul class = "list-unstyled list-group list-group-flush">
+  <li class="list-group-item"><b>{{ c.name }}</b></li>
+  <li class="list-group-item">{{ c.description }}</li>
+  <li class="list-group-item">{{ c.comics_appeared_in }}</li>
+  <li class="list-group-item">{{ c.super_power }}</li>
+</ul>
+</div>
+{% endfor %}
+{% endblock content %}
+

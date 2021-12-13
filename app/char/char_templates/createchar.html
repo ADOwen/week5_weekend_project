@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Character Creation Page</h1>
+<form action="" method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        <fieldset>
+            {{ form.name.label }}
+            {{ form.name(class='form-control', placeholder= 'Please type in Marvel Character Name')}}
+        </fieldset>
+        <fieldset>
+            {{ form.description.label }}
+            {{ form.description(class='form-control', placeholder= 'Please type in Description')}}
+        </fieldset>
+        <fieldset>
+            {{ form.comics_appeared_in.label }}
+            {{ form.comics_appeared_in(class='form-control', placeholder= 'Please type in how many comics this character appeared in')}}
+        </fieldset>
+        <fieldset>
+            {{ form.super_power.label }}
+            {{ form.super_power(class='form-control', placeholder= 'Please type in Super Power')}}
+        </fieldset>
+        {{ form.submit(class='btn btn-primary')}}
+    </div>
+</form>
+{% endblock content %}
